@@ -1,0 +1,19 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>
+        <title>{% block title %} Nagado diary {% endblock %}</title>
+    </head>
+    <body>
+    <style>
+        body {
+        } 
+    </style> 
+        <div class="topnav">
+            <a href="{% url 'new' %}">Create new post</a>
+            <a href="{% url 'posts' %}">Posts</a>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
+</html>
